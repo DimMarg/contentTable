@@ -1,0 +1,24 @@
+#ct_TableOfContents {
+    padding: 20px 30px;
+    border: 1px solid #444;
+    margin-bottom: 50px;
+}
+
+ul.ct_list-of-content {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.ct_content-table_title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+ul.ct_list-of-content li a {
+    text-decoration: none;
+    color: #444;
+}
+
+ul.ct_list-of-content li a:hover {
+    text-decoration: underline;
+}
