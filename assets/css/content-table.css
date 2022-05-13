@@ -1,17 +1,32 @@
+.d-block {
+    display: block;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
 #ct_TableOfContents {
     padding: 20px 30px;
     border: 1px solid #444;
     margin-bottom: 50px;
 }
 
+.ct_header, #ct_btn {
+    transition: all 0.3s ease-in-out;
+}
+
 ul.ct_list-of-content {
+    display: none;
     list-style-type: none;
     padding: 0px;
+    text-align: left;
 }
 
 .ct_content-table_title {
     font-size: 1.2rem;
     font-weight: bold;
+    margin: 0px;
 }
 
 ul.ct_list-of-content li {
@@ -26,3 +41,21 @@ ul.ct_list-of-content li a {
 ul.ct_list-of-content li a:hover {
     text-decoration: underline;
 }
+
+.ct_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#ct_btn {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: none;
+    border: none;
+  }

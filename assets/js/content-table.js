@@ -7,12 +7,12 @@ function get_headings() {
   let i = z = 1;
 
   for (let i = 0; i < h.length; i++) {
-    allHeaders[i] = document.querySelectorAll(h[i]);
+    allHeaders[i] = document.querySelectorAll("main " + h[i]);
   }
 
   for (let j = 0; j < allHeaders.length; j++) {
       for (let y = 0; y < allHeaders[j].length; y++) {
-          allHeaders[j][y].id = "heading_" + z;
+          allHeaders[j][y].id = allHeaders[j][y].textContent;
           contentOfHeaders.push(allHeaders[j][y].textContent);
           z++;
       }
@@ -23,9 +23,18 @@ function get_headings() {
     let list = document.createElement("li");
     let listLink = document.createElement("a");
     listLink.innerText = item;
-    listLink.href = "#heading_" + i;
+    listLink.href = "#" + item;
     list.appendChild(listLink);
         document.querySelector('.ct_list-of-content').appendChild(list);
     i++;
   })
+
+  var content_btn =   document.querySelector('#ct_btn');
+
+  content_btn.addEventListener('click', function(e) {
+  [].map.call(document.querySelectorAll('.ct_list-of-content'), function(el) {
+      el.classList.toggle('d-block');
+      content_btn.classList.toggle('rotate-180');
+    });
+  });
 }
